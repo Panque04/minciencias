@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
             <footer>
                 <div class="footer-info">
                     <h3>Información de la Entidad</h3>
-                    <p>Dirección: Calle Falsa 123, Ciudad, País</p>
-                    <p>Teléfono: (123) 456-7890</p>
+                    <p>Dirección: Calle 41 B Sur, Tausa, Colombia</p>
+                    <p>Teléfono: +57 (601) 881-7890</p>
                     <p>Email: soporte@entidad.com</p>
                 </div>
                 <div class="footer-horarios">

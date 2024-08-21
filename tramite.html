@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trámite - Plataforma Participativa</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="common.js" defer></script>
+    <script src="tramite.js" defer></script>
+</head>
+<body>
+    <!-- Encabezado y navegación se cargan desde common.js -->
+    
+    <main>
+        <section id="tramite">
+            <h2>Trámite Catastral</h2>
+            <form id="formulario-tramite">
+                <label for="cedula">Cédula:</label>
+                <input type="text" id="cedula" name="cedula" required><br>
+
+                <label for="nombres">Nombres y Apellidos:</label>
+                <input type="text" id="nombres" name="nombres" required><br>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required><br>
+
+                <label for="tipo-tramite">Tipo de Trámite:</label>
+                <select id="tipo-tramite" name="tipo-tramite" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="desenglobe">Desenglobe</option>
+                    <option value="englobe">Englobe</option>
+                    <option value="division">División</option>
+                    <option value="fusion">Fusión</option>
+                    <option value="modificacion">Modificación</option>
+                </select><br>
+
+                <div id="campos-adicionales">
+                    <!-- Campos adicionales según el tipo de trámite seleccionado -->
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    
+    <!-- Pie de página se carga desde common.js -->
+</body>
+</html>

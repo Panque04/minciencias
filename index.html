@@ -1,63 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Plataforma Participativa</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script src="common.js" defer></script>
-</head>
-<style>
+  </head>
+  <style>
     main {
-        height: 70%;
-        width: 70%;
-		margin: 0;
+      height: 70%;
+      width: 100vw;
+      margin: 0;
+      padding: 0;
     }
 
     .InfoPg {
         display: flex;
+        width: 100%;
         align-items: center;
-        max-width: 1000px;
-        gap: 150px;
-        justify-content: center; /* Centra horizontalmente */
-        align-items: center; /* Centra verticalmente */
-        height: 50vh;
-        margin: 100;
-    }
+        justify-content: space-evenly;
+        align-content: flex-start;
+        flex-direction: row-reverse;
+      }
     
-
-</style>
-<body>
+  </style>
+  <body>
     <!-- Encabezado y navegación se cargan desde common.js -->
 
     <main>
-        <!-- Sección de Información de la Página -->
-        <h2>Información de la Página</h2>
-        <div class="InfoPg">
-            <!-- <section id="informacion-pagina"> -->
-            <img src="Imagenes/Plataforma.jpg" alt="Imagen representativa" width="400" height="400" >
-            <p>La Plataforma Participativa de Catastro Multipropósito ofrece a los usuarios herramientas clave para explorar el territorio, gestionar trámites y acceder a información estadística sobre el uso del suelo. A través del Geovisor, puedes navegar mapas interactivos, consultar detalles de parcelas, activar capas geográficas y obtener información detallada sobre el territorio. Los trámites de conservación permiten gestionar solicitudes relacionadas con la preservación del entorno y reportar actividades que afecten áreas protegidas.
+      <!-- Sección de Información de la Página -->
+      <h2>Información de la Página</h2>
+      <div class="InfoPg">
+        <!-- <section id="informacion-pagina"> -->
+        <img
+          src="Imagenes/Plataforma.jpg"
+          alt="Imagen representativa"
+          width="400"
+          height="400"
+        />
+        <p style="width: 30%;">
+          La Plataforma Participativa de Catastro Multipropósito ofrece a los
+          usuarios herramientas clave para explorar el territorio, gestionar
+          trámites y acceder a información estadística sobre el uso del suelo. A
+          través del Geovisor, puedes navegar mapas interactivos, consultar
+          detalles de parcelas, activar capas geográficas y obtener información
+          detallada sobre el territorio. Los trámites de conservación permiten
+          gestionar solicitudes relacionadas con la preservación del entorno y
+          reportar actividades que afecten áreas protegidas. Además, la sección
+          de Estadísticas facilita el acceso a datos sobre cambios en la
+          cobertura del suelo, áreas protegidas y dinámicas territoriales. Los
+          usuarios pueden hacer consultas, descargar datos o visualizar gráficos
+          interactivos. La plataforma promueve la colaboración y participación
+          para una administración territorial eficiente y sostenible.
+        </p>
+        <!-- </section> -->
+      </div>
+      <!-- Sección de Información del Municipio -->
+      <section id="informacion-municipio" style="width: 100%;">
+        <h2>Información del Municipio</h2>
+        <img src="Imagenes/Tausa.jpg" alt="Imagen del municipio" width="400" height="400"/>
+        <p>
+          El municipio de Tausa se encuentra en el departamento de Cundinamarca,
+          en la provincia de Ubaté. Conocido por su rica historia y paisajes
+          naturales, Tausa cuenta con un territorio que combina áreas urbanas,
+          rurales y zonas de alta importancia ecológica. Su economía tradicional
+          está basada en la agricultura, la ganadería y la explotación de
+          recursos naturales, como las minas de carbón. Tausa también es hogar
+          de importantes recursos hídricos y zonas de conservación que requieren
+          una gestión adecuada para su preservación. La creación de la
+          Plataforma Participativa de Catastro Multipropósito permitirá a los
+          habitantes y autoridades locales gestionar de manera eficiente la
+          información territorial, promoviendo una administración sostenible y
+          colaborativa del suelo y los recursos naturales.
+        </p>
+      </section>
 
-                    Además, la sección de Estadísticas facilita el acceso a datos sobre cambios en la cobertura del suelo, áreas protegidas y dinámicas territoriales. Los usuarios pueden hacer consultas, descargar datos o visualizar gráficos interactivos. La plataforma promueve la colaboración y participación para una administración territorial eficiente y sostenible.</p>
-            <!-- </section> -->
-        </div>
-        <!-- Sección de Información del Municipio -->
-        <section id="informacion-municipio">
-            <h2>Información del Municipio</h2>
-            <img src="Imagenes/Tausa.jpg" alt="Imagen del municipio">
-            <p>El municipio de Tausa se encuentra en el departamento de Cundinamarca, en la provincia de Ubaté. Conocido por su rica historia y paisajes naturales, Tausa cuenta con un territorio que combina áreas urbanas, rurales y zonas de alta importancia ecológica. Su economía tradicional está basada en la agricultura, la ganadería y la explotación de recursos naturales, como las minas de carbón.
-
-                Tausa también es hogar de importantes recursos hídricos y zonas de conservación que requieren una gestión adecuada para su preservación. La creación de la Plataforma Participativa de Catastro Multipropósito permitirá a los habitantes y autoridades locales gestionar de manera eficiente la información territorial, promoviendo una administración sostenible y colaborativa del suelo y los recursos naturales.</p>
-        </section>
-
-        <!-- Sección de Estadísticos -->
-        <section id="estadisticos">
-            <h2>Estadísticos</h2>
-            <p>Resumen de estadísticos. <a href="estadisticos.html">Ver más</a></p>
-        </section>
+      <!-- Sección de Estadísticos -->
+      <section id="estadisticos">
+        <h2>Estadísticos</h2>
+        <p>Resumen de estadísticos. <a href="estadisticos.html">Ver más</a></p>
+      </section>
     </main>
 
     <!-- Pie de página se carga desde common.js -->
-</body>
-
+  </body>
 </html>

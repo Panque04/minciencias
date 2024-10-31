@@ -1,21 +1,9 @@
-/* styles.css */
+/* styles.css 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-}
-
-/*header {
-    background-color: #2500f7;
-    color: white;
-    padding: 15px 0;
-    text-align: center;
 }*/
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
 
 nav ul li {
     display: inline;
@@ -32,15 +20,76 @@ main {
 }
 
 footer {
-    background-color: #333;
+    background-color: #1e40af;
     color: white;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
     position: relative;
     width: 100%;
     bottom: 0;
+    column-count: 3; /* Divide el contenido en dos columnas */
+    column-gap: 16px; /* Espacio entre columnas */
 }
 
 .footer-info, .footer-horarios, .footer-soporte {
-    margin: 10px 0;
-}
+    margin: 15px 0;
+    break-inside: avoid;/* No permite que se rompan los textos */
+}      body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  .top-bar {
+    background-color: #2563eb;
+    color: white;
+    padding: 10px 0;
+  }
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main-header {
+    padding: 10px 0;
+    background-color: white;
+    color: black;   
+  }
+  .logo-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .tausa-logo {
+    display: flex;
+    font-size: 2em;
+    font-weight: bold;
+    align-items: center;
+    justify-content: space-between;    
+ 
+  }
+  .nav-bar {
+    background-color: #1e40af;
+    color: white;
+    padding: 15px 0;
+  }
+  .nav-bar .container {
+    justify-content: flex-start;
+  }
+  .nav-title {
+    margin-right: 200px;
+  }
+  .nav-bar ul {
+    list-style-type: none;
+    padding: 50;
+    margin: 0;
+    display: flex;
+  }
+  .nav-bar li {
+    margin-right: 30px;
+  }
+  .nav-bar a {
+    color: white;
+    text-decoration: none;
+  }

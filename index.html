@@ -7,19 +7,40 @@
     <link rel="stylesheet" href="styles.css">
     <script src="common.js" defer></script>
 </head>
+<style>
+    main {
+        height: 70%;
+        width: 70%;
+		margin: 0;
+    }
+
+    .InfoPg {
+        display: flex;
+        align-items: center;
+        max-width: 1000px;
+        gap: 150px;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+        height: 50vh;
+        margin: 100;
+    }
+    
+
+</style>
 <body>
     <!-- Encabezado y navegación se cargan desde common.js -->
 
     <main>
         <!-- Sección de Información de la Página -->
-        <section id="informacion-pagina">
-            <h2>Información de la Página</h2>
-            <img src="Imagenes/Plataforma.jpg" alt="Imagen representativa">
+        <h2>Información de la Página</h2>
+        <div class="InfoPg">
+            <!-- <section id="informacion-pagina"> -->
+            <img src="Imagenes/Plataforma.jpg" alt="Imagen representativa" width="400" height="400" >
             <p>La Plataforma Participativa de Catastro Multipropósito ofrece a los usuarios herramientas clave para explorar el territorio, gestionar trámites y acceder a información estadística sobre el uso del suelo. A través del Geovisor, puedes navegar mapas interactivos, consultar detalles de parcelas, activar capas geográficas y obtener información detallada sobre el territorio. Los trámites de conservación permiten gestionar solicitudes relacionadas con la preservación del entorno y reportar actividades que afecten áreas protegidas.
 
-                Además, la sección de Estadísticas facilita el acceso a datos sobre cambios en la cobertura del suelo, áreas protegidas y dinámicas territoriales. Los usuarios pueden hacer consultas, descargar datos o visualizar gráficos interactivos. La plataforma promueve la colaboración y participación para una administración territorial eficiente y sostenible.</p>
-        </section>
-
+                    Además, la sección de Estadísticas facilita el acceso a datos sobre cambios en la cobertura del suelo, áreas protegidas y dinámicas territoriales. Los usuarios pueden hacer consultas, descargar datos o visualizar gráficos interactivos. La plataforma promueve la colaboración y participación para una administración territorial eficiente y sostenible.</p>
+            <!-- </section> -->
+        </div>
         <!-- Sección de Información del Municipio -->
         <section id="informacion-municipio">
             <h2>Información del Municipio</h2>
@@ -38,4 +59,5 @@
 
     <!-- Pie de página se carga desde common.js -->
 </body>
+
 </html>

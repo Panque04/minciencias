@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     map.addLayer(vectorLayer);
 
-    // Función para cargar información catastral (simulada aquí, puedes adaptarla a tus necesidades)
+    // Función para cargar información catastral (simulada aquí, puedes adaptarla a tus necesidades
+    
     function loadCadastralInfo() {
         const features = [
             new ol.Feature({

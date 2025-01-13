@@ -12,63 +12,112 @@
     <script src="https://cdn.jsdelivr.net/npm/ol/ol.js"></script>
     <script src="common.js" defer></script>
     <script src="geovisor.js" defer></script>
-	<style>
-		html, body {
-			height: 100%;
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
             width: 100%;
-			margin: 0;
-		}
-		.leaflet-container {
-			height: 400px;
-			width: 600px;
-			max-width: 100%;
-			max-height: 100%;
-		}
-	</style>
+            margin: 0;
+        }
+        .leaflet-container {
+            height: 100%;
+            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .nav-link {
+            padding: 0.75rem 1rem;
+            color: white;
+            text-decoration: none;
+        }
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    </style>
 </head>
-<body>
-    <main>
-        <section id="Geovisor">
-            <h2>Geovisor</h2>
-        </section>
-    </main>
-    <div id="map" style="width: 80%; height: 90%;"></div>
+
+
+    <!-- Main Content -->
+    <div class="flex-1 flex">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white border-r p-4 space-y-4">
+            <div class="space-y-2">
+                <label class="text-sm text-gray-600">Label</label>
+                <div class="relative">
+                    <input type="text" placeholder="Input" class="w-full px-3 py-2 border rounded-md">
+                    <button class="absolute right-2 top-1/2 transform -translate-y-1/2">
+                        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <nav class="space-y-2">
+                <button class="flex items-center gap-2 w-full p-2 hover:bg-gray-100 rounded">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                    </svg>
+                    <span>Capas Geograficas</span>
+                </button>
+                <button class="flex items-center gap-2 w-full p-2 hover:bg-gray-100 rounded">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    <span>Mis Lugares</span>
+                </button>
+                <button class="flex items-center gap-2 w-full p-2 hover:bg-gray-100 rounded">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                    </svg>
+                    <span>Mapa Base</span>
+                </button>
+                <button class="flex items-center gap-2 w-full p-2 hover:bg-gray-100 rounded">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                    </svg>
+                    <span>Marcadores</span>
+                </button>
+            </nav>
+        </aside>
+
+        <!-- Map Area -->
+        <main class="flex-1">
+            <div id="map" style="width: 100%; height: 100%;"></div>
+        </main>
+    </div>
+
+ 
+
     <script>
-        const map = L.map('map').setView([5.145000, -73.935754], 12)
+        const map = L.map('map').setView([5.145000, -73.935754], 12);
         const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
     
-    //puntos de la ruta
-    var markers = [
-                {
-                    coordinates: [5.195746, -73.886717],
-                    popupContent: "Casco urbano Tausa"
-                },
-                
+        //puntos de la ruta
+        var markers = [
+            {
+                coordinates: [5.195746, -73.886717],
+                popupContent: "Casco urbano Tausa"
+            },
+        ];
+        var markerCoordinates = [];
+        markers.forEach(function(markerInfo) {
+            var marker = L.marker(markerInfo.coordinates).addTo(map);
+            marker.bindPopup(markerInfo.popupContent);
     
-            ];
-    var markerCoordinates = [];
-    markers.forEach(function(markerInfo) {
-        var marker = L.marker(markerInfo.coordinates).addTo(map);
-        marker.bindPopup(markerInfo.popupContent);
+            // Agregar las coordenadas del marcador al array
+            markerCoordinates.push(markerInfo.coordinates);
+        });	
     
-    
-        // Agregar las coordenadas del marcador al array
-        markerCoordinates.push(markerInfo.coordinates);
-    });	
-    
-    
-    // Crear una polilínea que une los marcadores
-    //var polyline = L.polyline(markerCoordinates, {color: 'blue'}).addTo(map);
-    
+        // Crear una polilínea que une los marcadores
+        //var polyline = L.polyline(markerCoordinates, {color: 'blue'}).addTo(map);
     </script>
-
-<body>
-    <!-- Encabezado y navegación se cargan desde common.js -->
-    
-
-    <!-- Pie de página se carga desde common.js -->
 </body>
 </html>

@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <li><a href="geovisor.html">Geovisor</a></li>
                         <li><a href="tramite.html">Trámite</a></li>
                         <li><a href="estadisticos.html">Estadísticos</a></li>
-                    </ul>
+                        <li><a href="login.html">login</a></li>
                 </div>
                 </nav>
             </header>

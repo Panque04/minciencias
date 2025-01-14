@@ -6,17 +6,20 @@ document.addEventListener("DOMContentLoaded", function () {
             <header>
                 <div class="top-bar">
           <div class="container">
-            <img src="Imagenes/LogoIGAC.jpg" alt="LogoIGAC" width="80" height="35">
+            <img src="Imagenes/IGAC.png" alt="IGAC" width="100" height="50">
+              <section id="informacion-municipio" style="width: 100%; text-align: center;">
+              <h2 style="font-style: oblique cursive;">El Catastro es de todos, ¡Hagamos que Funcione !</h2>
+              </section>
             <span>GOV.CO</span>
           </div>
         </div>
         <div class="main-header">
-          <div class="container">
-            <div class="logo-section">
-              <img src="Imagenes/EscudoUD.png" alt="UD" width="100" height="100">
-              <div class="tausa-logo">
-                <img src="Imagenes/AlcaldiaTausa.jpg" alt="AlcaldiaTausa" width="100" height="50">
-                  <div>PLATAFORMA PARTICIPATIVA</div>
+                    <div class="container">
+                        <div class="logo-section">
+                            <img src="Imagenes/EscudoUD.png" alt="UD" width="100" height="100">
+                            <div class="tausa-logo" style="display: flex; align-items: center;">
+                                <div style="margin-right: 20px;">PLATAFORMA PARTICIPATIVA</div>
+                                <img src="Imagenes/AlcaldiaTausa.jpg" alt="AlcaldiaTausa" width="100" height="50">
                 </div>
               </div>
             </div>
@@ -27,10 +30,15 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="nav-title">Catastro Tausa</div>                            
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
-                        <li><a href="geovisor.html">Geovisor</a></li>
+                        <li>
+                          <a href="geovisor.html" class="geovisor-link">
+                          Geovisor
+
+                          </a>
+                        </li>
                         <li><a href="tramite.html">Trámite</a></li>
                         <li><a href="estadisticos.html">Estadísticos</a></li>
-                        <li><a href="login.html">login</a></li>
+                        <li><a href="login.html">Login</a></li>
                 </div>
                 </nav>
             </header>
